@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      referrerpolicy="no-referrer"
+      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>لیست انجام کار</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header><h1>لیست انجام کار</h1></header>
+      <section class="todoadd-section">
+        <form class="todoadd-form">
+          <input
+            type="text"
+            class="todoadd-input"
+            placeholder="عنوان کار جدید را وارد نمایید"
+          />
+          <button type="submit" class="todoadd-btn">
+            <i class="fa fa-plus"></i>
+          </button>
+          <span class="messages messages-error display-none"></span>
+        </form>
+      </section>
+
+      <section class="todofilters-section">
+        <form>
+          <span>وضعیت:</span>
+          <select class="filter-todos" name="todos">
+            <option value="all">همه</option>
+            <option value="completed">انجام شده</option>
+            <option value="uncompleted">انجام نشده</option>
+          </select>
+        </form>
+      </section>
+
+      <section class="todolist-section">
+        <ul class="todolist"></ul>
+      </section>
+    </div>
+
+    <div class="backdrop display-none"></div>
+    <div class="modal display-none">
+      <div class="modal__close">
+        <button class="modal__close-btn"><i class="fa fa-remove"></i></button>
+      </div>
+      <div class="modal__header"><h1>ویرایش اطلاعات</h1></div>
+      <div class="modal__body">
+        <section class="todoedit-section">
+          <form class="todoedit-form">
+            <input type="text" class="todoedit-input" />
+            <button type="submit" class="todoedit-btn">
+              <i class="fa fa-edit"></i>
+            </button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="js/todolist.js"></script>
+  </body>
+</html>
